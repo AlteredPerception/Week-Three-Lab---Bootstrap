@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <!--
+        Date - April 1st, 2025.
+
+        Week Three - Bootstrap project. 
+
+        This project is to see whether I understand the basics of Bootstrap
+        enough to create a basic yet powerful website with the convenience 
+        BootStrap has been built to give developers. 
+
+        Create a new website using HTML and Bootstrap. 
+        The website must include the following:
+            At least 2 pages.
+            A Bootstrap navbar, table, and form.
+            Bootstrap grid used throughout to format elements
+            Elements should stack vertically when the window is small
+    -->
+    
+    <!-- Create the navbar on top -->
+    <!--
+        | Class Name                          | Description 
+        | container-fluid                     | Stretches the whole container across the page.
+        | navbar                              | Main navbar class (has to be first).
+        | navbar-expand{-sm|-md|-lg|-xl|-xxl} | This is for responsive collapsing.
+        | navbar-expand-sm                    | expands on smaller screens.
+        | navbar-dark                         | Used to style the background call of the navbar (deprecated).
+        | bg-dark                             | Sets background color to a Dark Gray.
+        | navbar-brand                        | Used to set the brand of the site. Either text, icon, or a combination.
+        | ps-3                                | sets padding on the (start) left.
+    
+    -->
+    <!-- Start of the container-fluid -->
+    <div class="container-fluid">
+        <!-- Begining of navbar with the necessary classes. -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <!-- Brand link. -->
+            <a class="navbar-brand ps-3" href="index.html">Sophia</a>
+            <!-- Button with controls the burger. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Navebar toggler icon -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- The list items will appear to the right of the nave-brand.  -->
+            <!-- This will become collapsable when the window is resized. -->
+            <div class="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
+                <!-- Unordered list -->
+                <ul class="navbar-nav ms-4">
+                    <!-- List Item one. Active. -->
+                    <li class="nav-item active">
+                        <!-- nav-link -->
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <!-- List Item two. -->
+                    <li class="nav-item">
+                        <!-- nav-link -->
+                        <a class="nav-link" href="Users.html">Users</a>
+                    </li>
+                </ul>
+            </div>
+        <!-- End of nav. -->
+        </nav> 
+
+        <!--Main container-fluid. -->
+        <div class="container-fluid">
+            <!-- One row. -->
+            <div class="row">
+                <!-- Column medium six with white text and dark background. -->
+                <div class="col-md-6 text-white bg-dark">
+                    <!-- Row containing welcome message. -->
+                    <div class="row">
+                        <!-- First paragraph of the welcome message. margin-left, and margin-ton of 3. -->
+                        <p class="ms-3 mt-3">
+                            Welcome to Sophia. A social media platform where philosophical
+                            discussions are encouraged. Philosophy is the bedrock of everything
+                            in our lives. From questions regarding what to eat in the morning to
+                            where we come from. 
+                        </p>
+                        <!-- Margin-left, margin-top 3. -->
+                        <h3 class="ms-3 mt-3">What is Philosophy?</h3>
+                        <!-- Paragraph with left margin 4. -->
+                        <p class="ms-4">
+                            Though the practice of exchanging ideas goes back thousands of years
+                            through various forms, it wasn't until the ancient Greeks that philosophy
+                            really started to take root in the world. Many other cultures around the world
+                            had their own philosophical revolutions before, during, and after the Greeks.
+                        </p>
+                        <!-- Paragraph with margin-left-4 and margine-top-3 -->
+                        <p class="ms-4 mt-3">
+                            More information can be found on the <a href="#">Philosophy Page</a>. We hope you 
+                            enjoy your stay on this wonderful website. Each of us is here seeking and pursuing 
+                            wisdom. Let us go find it. 
+                        </p>
+                        <!-- Header 4 with margin-left-4 and margin-top-3. -->
+                        <h4 class="ms-4 mt-3">Register now by filling out the form.</h4>
+                    </div>
+                </div>
+                <!-- Beginning of user profile card. -->
+                <!-- div uses column medium six with white text amd dark background. -->
+                <div class="col-md-6 text-white bg-dark">
+                    <!-- Card div. -->
+                    <div class="card bg-secondary ms-5 text-white" style="width: 25rem;">
+                        <!-- Card Image. -->
+                        <img 
+                        src="/images/iron_man_facebook_profile_picture_by_c6h6kid_d9eltfv-fullview.jpg" 
+                        class="card-img-top" 
+                        alt=""
+                        width="100">
+                        <!-- Card body. -->
+                        <div class="card-body">
+                            <!-- Card title. -->
+                            <h5 class="text-white card-title text-center">Enter Your Info</h5>
+                            <!-- Create a row.-->
+                            <div class="row">
+                                <!-- Form with class row, needs-validartion -->
+                                <form class="row needs-validation" novalidate>
+                                    <!-- Form full name div. -->
+                                    <div class="mb-3">
+                                        <!-- Full Name form label. -->
+                                        <label for="fullName" class="form-label">Fall Name</label>
+                                        <!-- Full Name input form control. -->
+                                        <input type="text" name="fullName" id="fullName" class="form-control" placeholder="Enter your full name">
+                                    </div>
+                                    <!-- Form Email div. -->
+                                    <div class="mb-3">
+                                        <!-- Email form label. -->
+                                        <label for="email" class="form-label">Email</label>
+                                        <!-- Email form control input. -->
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="example@mail.com">
+                                    </div>
+                                    <!-- Form Bio div. -->
+                                    <div class="mb-3">
+                                        <!-- Bio form label. --> 
+                                        <label for="bio" class="form-label">Bio</label>   
+                                        <!-- Textarea form control. -->
+                                        <textarea name="bio" id="bio" class="form-control "></textarea>
+                                    </div>
+                                    <!-- Submit button div. -->
+                                    <div class="d-grid mb-3">
+                                        <!-- Submit button. -->
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer class. -->
+        <footer class="card-footer bg-dark text-white" style="height: 18rem;">
+            <h4 class="ms-4" >Care of Rosario Corsini.</h4>
+        </footer>
+    </div>  <!-- So many nested elements! -->
+    <!-- BootStrap JavaScript. -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
